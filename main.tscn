@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://brok6lpty8ijw"]
+
+[ext_resource type="Texture2D" uid="uid://daktwcf6hmbfu" path="res://assets/sprites/player/Warrior_Blue.png" id="1_ig7tw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 20.09975
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_ig7tw")
+hframes = 6
+vframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_onrkg")
