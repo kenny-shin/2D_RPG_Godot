@@ -17,7 +17,8 @@ var move_direction: Vector2 = Vector2.ZERO
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var animation_playback: AnimationNodeStateMachinePlayback = $AnimationTree["parameters/playback"]
 
-
+func _ready() -> void:
+	animation_tree.set_active(true)
 
 
 func _physics_process(_delta: float) -> void:
