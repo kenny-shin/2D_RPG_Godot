@@ -6,9 +6,8 @@ extends CharacterBody2D
 
 var move_direction: Vector2 = Vector2.ZERO
 
-func _phyiscal_process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	movement_loop()
-	
 func movement_loop() -> void:
 	move_direction.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	move_direction.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("up"))
