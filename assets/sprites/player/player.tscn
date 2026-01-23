@@ -1,15 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://brok6lpty8ijw"]
+[gd_scene load_steps=4 format=3 uid="uid://bflytww4eqfcl"]
 
-[ext_resource type="Texture2D" uid="uid://daktwcf6hmbfu" path="res://assets/sprites/player/Warrior_Blue.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://d1x084ve3frsg" path="res://assets/sprites/player/player.gd" id="1_5y3cv"]
+[ext_resource type="Texture2D" uid="uid://daktwcf6hmbfu" path="res://assets/sprites/player/Warrior_Blue.png" id="1_bmasd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 20.09975
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_5y3cv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -32)
-texture = ExtResource("1_ig7tw")
+texture = ExtResource("1_bmasd")
 hframes = 6
 vframes = 8
 
