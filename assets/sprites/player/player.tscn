@@ -118,33 +118,33 @@ _data = {
 &"run": SubResource("Animation_mi1md")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5etsr"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mi1md"]
 animation = &"attack_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1kiwr"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x81q6"]
 animation = &"attack_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yxp8q"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6he6t"]
 animation = &"attack_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3t72s"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t04e1"]
 animation = &"attack_down"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_hfryj"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_5etsr")
+blend_point_0/node = SubResource("AnimationNodeAnimation_mi1md")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_1kiwr")
+blend_point_1/node = SubResource("AnimationNodeAnimation_x81q6")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_yxp8q")
+blend_point_2/node = SubResource("AnimationNodeAnimation_6he6t")
 blend_point_2/pos = Vector2(0, -1)
-blend_point_3/node = SubResource("AnimationNodeAnimation_3t72s")
+blend_point_3/node = SubResource("AnimationNodeAnimation_t04e1")
 blend_point_3/pos = Vector2(0, 1)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_243bf"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_dlh3x"]
-graph_offset = Vector2(-122.965454, -24.11721)
+graph_offset = Vector2(-71.190094, -19.140503)
 nodes/output/position = Vector2(920, 140)
 nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_hfryj")
 nodes/BlendSpace2D/position = Vector2(220, 80)
@@ -174,6 +174,7 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_5y3cv"]
+states/Start/position = Vector2(176, 100)
 states/attack/node = SubResource("AnimationNodeBlendTree_dlh3x")
 states/attack/position = Vector2(436, 197)
 states/idle/node = SubResource("AnimationNodeAnimation_5y3cv")
