@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2d_RPG_GODOT"
-run/main_scene="uid://bflytww4eqfcl"
+run/main_scene="uid://b06e1mywv1ahv"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
