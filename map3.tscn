@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmcjrqkawjtav"]
+
+[ext_resource type="PackedScene" uid="uid://b06e1mywv1ahv" path="res://map.tscn" id="1_no3r6"]
+
+[node name="Map" instance=ExtResource("1_no3r6")]
+
+[node name="Ground" parent="." index="2"]
+collision_enabled = false
+
+[node name="PropsGround" parent="." index="4"]
+collision_enabled = false
+
+[node name="Plateau" parent="." index="5"]
+collision_enabled = false

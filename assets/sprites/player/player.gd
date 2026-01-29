@@ -64,6 +64,7 @@ func update_animation() -> void:
 			animation_playback.travel("attack")
 			
 			
+
 func attack() -> void:
 	if state == State.ATTACK:
 		return
@@ -78,7 +79,7 @@ func attack() -> void:
 	
 	await get_tree().create_timer(attack_speed).timeout
 	state = State.IDLE
-	
+
 
 
 
