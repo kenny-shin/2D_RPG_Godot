@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://bliwgu0rvidyg"]
 
-[ext_resource type="Script" uid="uid://d1x084ve3frsg" path="res://assets/sprites/player/player.gd" id="1_avrkm"]
-[ext_resource type="Texture2D" uid="uid://daktwcf6hmbfu" path="res://assets/sprites/player/Warrior_Blue.png" id="2_xv7ca"]
+[ext_resource type="Script" uid="uid://df2ig6dbfdxun" path="res://assets/sprites/enemies/enemy.gd" id="1_68ohs"]
+[ext_resource type="Texture2D" uid="uid://drccrp7glnn06" path="res://assets/sprites/enemies/Warrior_Red.png" id="2_rrgw0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 20.09975
@@ -185,12 +185,12 @@ states/run/node = SubResource("AnimationNodeAnimation_o5c73")
 states/run/position = Vector2(410, 58)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_mi1md"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_x81q6"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_1rn1i"), "run", "attack", SubResource("AnimationNodeStateMachineTransition_2g7uh"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_lvo51"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_6he6t")]
 
-[node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_avrkm")
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_68ohs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -32)
-texture = ExtResource("2_xv7ca")
+texture = ExtResource("2_rrgw0")
 hframes = 6
 vframes = 8
 frame = 5
