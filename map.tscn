@@ -1784,3 +1784,6 @@ position = Vector2(471, 942)
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("17_a6rn7")]
 position = Vector2(949, 541)
+
+[node name="Effects" type="Node2D" parent="."]
+unique_name_in_owner = true

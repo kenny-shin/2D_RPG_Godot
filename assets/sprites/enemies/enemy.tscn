@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://bliwgu0rvidyg"]
+[gd_scene load_steps=29 format=3 uid="uid://bliwgu0rvidyg"]
 
 [ext_resource type="Script" uid="uid://df2ig6dbfdxun" path="res://assets/sprites/enemies/enemy.gd" id="1_68ohs"]
 [ext_resource type="Texture2D" uid="uid://drccrp7glnn06" path="res://assets/sprites/enemies/Warrior_Red.png" id="2_rrgw0"]
+[ext_resource type="PackedScene" uid="uid://bdulifcuoiham" path="res://death.tscn" id="2_vgkpc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 20.09975
@@ -191,6 +192,7 @@ height = 76.0
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_68ohs")
+death_packed = ExtResource("2_vgkpc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -32)
