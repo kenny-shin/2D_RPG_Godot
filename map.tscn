@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://b06e1mywv1ahv"]
+[gd_scene load_steps=38 format=4 uid="uid://b06e1mywv1ahv"]
 
 [ext_resource type="Texture2D" uid="uid://c1ta46ituybfu" path="res://Tiny Swords (Update 010)/Terrain/Water/water.png" id="1_wijl4"]
 [ext_resource type="Texture2D" uid="uid://1tiqcfxjtrh2" path="res://assets/Terrain/Tileset/Tilemap_color3.png" id="2_e0an3"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cfjk38r0yrrds" path="res://assets/Terrain/Decorations/Clouds/Clouds_06.png" id="13_jky6x"]
 [ext_resource type="Texture2D" uid="uid://rsg6xtm570n8" path="res://assets/Terrain/Decorations/Clouds/Clouds_07.png" id="14_4sf5t"]
 [ext_resource type="Texture2D" uid="uid://cwl3kwirdqmbi" path="res://assets/Terrain/Decorations/Clouds/Clouds_08.png" id="15_3mr0t"]
+[ext_resource type="PackedScene" uid="uid://bliwgu0rvidyg" path="res://assets/sprites/enemies/enemy.tscn" id="17_a6rn7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5pve"]
 texture = ExtResource("1_wijl4")
@@ -1778,3 +1779,8 @@ tile_set = SubResource("TileSet_yy28u")
 
 [node name="Player" parent="." instance=ExtResource("13_6qsgm")]
 position = Vector2(471, 942)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("17_a6rn7")]
+position = Vector2(949, 541)

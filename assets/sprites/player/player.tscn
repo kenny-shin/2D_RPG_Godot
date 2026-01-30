@@ -295,3 +295,5 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -23)
 shape = SubResource("RectangleShape2D_5y3cv")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
