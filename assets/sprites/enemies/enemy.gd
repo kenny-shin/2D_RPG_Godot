@@ -10,7 +10,7 @@ enum State {
 }
 @export_category("Stats")
 @export var speed: int = 128 
-@export var attack_damage: int 10
+@export var attack_damage: int = 10
 @export var attack_speed: float = 1.0
 @export var hitpoints:int = 180
 @export var aggro_range: float = 256.0
@@ -29,7 +29,7 @@ var state: State = State.IDLE
 func _ready() -> void:
 	animation_tree.set_active(true)
 	
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if state == State.DEAD:
 		return
 	if state == State.ATTACK:

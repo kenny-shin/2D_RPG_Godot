@@ -192,9 +192,6 @@ height = 76.0
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_68ohs")
-speed = null
-attack_damage = null
-hitpoints = null
 death_packed = ExtResource("2_vgkpc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
