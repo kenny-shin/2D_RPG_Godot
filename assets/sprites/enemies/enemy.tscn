@@ -355,6 +355,8 @@ height = 76.0
 size = Vector2(10, 42)
 
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_68ohs")
 death_packed = ExtResource("2_vgkpc")
 
