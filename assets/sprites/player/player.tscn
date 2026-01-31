@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bflytww4eqfcl"]
+[gd_scene load_steps=30 format=3 uid="uid://bflytww4eqfcl"]
 
 [ext_resource type="Script" uid="uid://d1x084ve3frsg" path="res://assets/sprites/player/player.gd" id="1_5y3cv"]
 [ext_resource type="Texture2D" uid="uid://daktwcf6hmbfu" path="res://assets/sprites/player/Warrior_Blue.png" id="1_bmasd"]
@@ -95,7 +95,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(-30, -50), Vector2(-30, -50), Vector2(14, -10)]
+"values": [Vector2(-30, -10), Vector2(-30, -10), Vector2(14, -10)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -107,7 +107,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.02443461, 0.02443461, -4.1643558]
+"values": [-2.1659536017249628, -2.1659536017249628, -4.1643558]
 }
 
 [sub_resource type="Animation" id="Animation_5etsr"]
@@ -254,7 +254,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.30198988),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(38, -27), Vector2(38, -27), Vector2(-32, -33)]
+"values": [Vector2(38, -50), Vector2(38, -50), Vector2(-32, -33)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -266,7 +266,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.30198988),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [1.8448130193580061, 1.844813, -1.0698868]
+"values": [0.4607669225265026, 0.4607669225265026, -1.0698868]
 }
 
 [sub_resource type="Animation" id="Animation_5y3cv"]
@@ -382,10 +382,14 @@ states/run/node = SubResource("AnimationNodeAnimation_o5c73")
 states/run/position = Vector2(410, 58)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_mi1md"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_x81q6"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_1rn1i"), "run", "attack", SubResource("AnimationNodeStateMachineTransition_2g7uh"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_lvo51"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_6he6t")]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5y3cv"]
+radius = 24.0
+height = 76.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5y3cv"]
 size = Vector2(10, 42)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_5y3cv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -411,6 +415,16 @@ tree_root = SubResource("AnimationNodeStateMachine_5y3cv")
 anim_player = NodePath("../AnimationPlayer")
 parameters/attack/BlendSpace2D/blend_position = Vector2(-1, -0.01449275)
 parameters/attack/TimeScale/scale = 1.0
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 0
+input_pickable = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(1, -27)
+shape = SubResource("CapsuleShape2D_5y3cv")
 
 [node name="HitBox" type="Area2D" parent="."]
 position = Vector2(22, -61)

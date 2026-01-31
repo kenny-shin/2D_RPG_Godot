@@ -11,6 +11,7 @@ enum State {
 @export var speed: int = 400
 @export var attack_speed: float = 0.6
 @export var attack_damage: int = 60
+@export var hitpoints: int = 150
 
 var state: State = State.IDLE
 var move_direction: Vector2 = Vector2.ZERO
@@ -80,19 +81,13 @@ func attack() -> void:
 	await get_tree().create_timer(attack_speed).timeout
 	state = State.IDLE
 
-
-
-
-
-	
-	
-
-
-
-	
-	
-	
-	
+func take_damage(damage_taken: int) -> void:
+	hitpoints -= damage_taken
+	if hitpoints <= 0:
+		death()
+		
+func death() -> void:
+	print("I died")
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
