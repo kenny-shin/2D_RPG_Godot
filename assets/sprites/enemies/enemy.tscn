@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://df2ig6dbfdxun" path="res://assets/sprites/enemies/enemy.gd" id="1_68ohs"]
 [ext_resource type="Texture2D" uid="uid://drccrp7glnn06" path="res://assets/sprites/enemies/Warrior_Red.png" id="2_rrgw0"]
-[ext_resource type="PackedScene" uid="uid://bdulifcuoiham" path="res://death.tscn" id="2_vgkpc"]
+[ext_resource type="PackedScene" uid="uid://bdulifcuoiham" path="res://Scenes/death.tscn" id="2_vgkpc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 20.09975

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="2d_RPG_GODOT"
-run/main_scene="uid://b06e1mywv1ahv"
+run/main_scene="uid://djwarv2348cp4"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PlayerData="*res://Scripts/global/player_data.gd"
 
 [display]
 
