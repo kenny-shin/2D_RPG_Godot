@@ -1820,7 +1820,13 @@ position = Vector2(471, 942)
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("17_a6rn7")]
-position = Vector2(832, 549)
+position = Vector2(893, 561)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("17_a6rn7")]
+position = Vector2(1355, 828)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("17_a6rn7")]
+position = Vector2(1259, 308)
 
 [node name="Effects" type="Node2D" parent="."]
 unique_name_in_owner = true

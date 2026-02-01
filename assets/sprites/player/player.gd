@@ -11,7 +11,7 @@ enum State {
 @export var speed: int = 400
 @export var attack_speed: float = 0.6
 @export var attack_damage: int = 60
-@export var hitpoints: int = 150
+@export var hitpoints: int = 180
 
 var state: State = State.IDLE
 var move_direction: Vector2 = Vector2.ZERO
