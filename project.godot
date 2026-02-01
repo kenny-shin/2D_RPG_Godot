@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2d_RPG_GODOT"
-run/main_scene="uid://djwarv2348cp4"
+run/main_scene="uid://d0okv0efpjm7a"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,8 +22,8 @@ LevelData="*res://Scripts/data/level_data.gd"
 
 [display]
 
-window/size/viewport_width=1080
-window/size/viewport_height=640
+window/size/viewport_width=1600
+window/size/viewport_height=1080
 
 [global_group]
 
