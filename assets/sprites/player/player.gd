@@ -34,7 +34,9 @@ func _physics_process(_delta: float) -> void:
 	
 func calculate_stats() -> void:
 	attack_speed = Equations.calculate_attack_speed()
-	
+	var time_factor: float = Equations.BASE_ATTACK_SPEED / attack_speed
+	animation_tree.set("parameters/attack/TimeScale/scale", time_factor)
+	print("My new attack speed: ", attack_speed)
 	
 	
 func movement_loop() -> void:

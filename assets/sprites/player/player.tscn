@@ -344,6 +344,7 @@ blend_mode = 1
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_243bf"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_dlh3x"]
+graph_offset = Vector2(-45.922607, 119.24442)
 nodes/output/position = Vector2(920, 140)
 nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_hfryj")
 nodes/BlendSpace2D/position = Vector2(220, 80)
