@@ -1,9 +1,11 @@
 extends Node2D
 
+
 func _ready() -> void:
 	var enemy_array: Array = get_tree().get_nodes_in_group("enemies")
 	for i in enemy_array:
 		i.died.connect(experience_gained)
+		
 		
 func experience_gained(exp_gain: int) -> void:
 	if PlayerData.level == LevelData.MAX_LEVEL:
@@ -13,6 +15,7 @@ func experience_gained(exp_gain: int) -> void:
 		level_up(new_experience)
 	else:
 		PlayerData.experience = new_experience
+		
 		
 func level_up(new_experience: int) -> void:
 	print("yay, I got more powerful")
