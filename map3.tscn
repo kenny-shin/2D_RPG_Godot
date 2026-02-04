@@ -12,3 +12,6 @@ collision_enabled = false
 
 [node name="Plateau" parent="." index="5"]
 collision_enabled = false
+
+[node name="Enemy11" parent="Enemies" index="10"]
+position = Vector2(893, 536)

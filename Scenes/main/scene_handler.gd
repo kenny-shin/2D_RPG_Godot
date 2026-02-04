@@ -40,6 +40,7 @@ func new_game(origin: String) -> void:
 
 	game_scene_instance = game_scene_packed.instantiate() as Node2D
 	add_child(game_scene_instance)
+	
 
 func settings_open(_origin: String) -> void:
 	pass

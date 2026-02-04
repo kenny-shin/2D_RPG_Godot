@@ -95,7 +95,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(-30, -10), Vector2(-30, -10), Vector2(14, -10)]
+"values": [Vector2(-30, -28), Vector2(-30, -28), Vector2(14, -10)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -107,7 +107,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-2.1659536017249628, -2.1659536017249628, -4.1643558]
+"values": [-2.1659536017249628, -2.1659536017249628, -4.7403142484166]
 }
 
 [sub_resource type="Animation" id="Animation_5etsr"]
@@ -388,7 +388,7 @@ radius = 24.0
 height = 76.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5y3cv"]
-size = Vector2(10, 42)
+size = Vector2(10, 52.34931)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 3
@@ -421,7 +421,6 @@ parameters/attack/BlendSpace2D/blend_position = Vector2(-1, -0.01449275)
 parameters/attack/TimeScale/scale = 1.0
 
 [node name="HurtBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 32
 collision_mask = 0
 input_pickable = false
@@ -432,7 +431,6 @@ position = Vector2(1, -27)
 shape = SubResource("CapsuleShape2D_5y3cv")
 
 [node name="HitBox" type="Area2D" parent="."]
-visible = false
 position = Vector2(22, -61)
 collision_layer = 0
 collision_mask = 16
@@ -440,7 +438,7 @@ input_pickable = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, -23)
+position = Vector2(0, -28)
 shape = SubResource("RectangleShape2D_5y3cv")
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

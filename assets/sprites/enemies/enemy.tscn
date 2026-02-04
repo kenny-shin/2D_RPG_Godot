@@ -348,8 +348,8 @@ states/run/position = Vector2(410, 58)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_mi1md"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_x81q6"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_1rn1i"), "run", "attack", SubResource("AnimationNodeStateMachineTransition_2g7uh"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_lvo51"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_6he6t")]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_68ohs"]
-radius = 24.0
-height = 76.0
+radius = 27.0
+height = 80.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgkpc"]
 size = Vector2(10, 42)
@@ -395,18 +395,18 @@ debug_use_custom = true
 debug_path_custom_color = Color(1, 0.050000012, 0.050000012, 1)
 
 [node name="HurtBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 16
 collision_mask = 0
 input_pickable = false
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(1, -27)
+position = Vector2(1, -32)
 shape = SubResource("CapsuleShape2D_68ohs")
 
 [node name="HitBox" type="Area2D" parent="."]
-visible = false
+position = Vector2(14, -10)
+rotation = -4.1643558
 collision_layer = 0
 collision_mask = 32
 input_pickable = false
